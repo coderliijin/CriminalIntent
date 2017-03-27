@@ -40,6 +40,7 @@ public class CrimeListFragment extends Fragment {
             mRecyclerView.setAdapter(mCrimeadapter);
         }else{
             mCrimeadapter.notifyDataSetChanged();
+            
         }
             
         
@@ -95,7 +96,8 @@ public class CrimeListFragment extends Fragment {
         @Override
         public void onClick(View v) {
             //Toast.makeText(getActivity(),mCrimes.getmTitle()+"clicked!",Toast.LENGTH_SHORT).show();
-            Intent intent=CrimeActivity.newIntent(getActivity(),mCrimes.getmId());
+           // Intent intent=CrimeActivity.newIntent(getActivity(),mCrimes.getmId());
+            Intent intent=CrimePagerActivity.newIntent(getActivity(),mCrimes.getmId());
             startActivity(intent);
         }
     }
